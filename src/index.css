@@ -1,0 +1,211 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+
+  /* Light and Dark theme overrides */
+  html.light {
+    color-scheme: light;
+  }
+
+  html.light body {
+    background-color: #f8fafc;
+    color: #0f172a;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  html.dark body {
+    background-color: #090b0e;
+    color: #f1f5f9;
+  }
+}
+
+/* Subtle animations for modern developer portfolio */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(0.5deg);
+  }
+}
+
+@keyframes float-delayed {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.82;
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 4.5s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 5s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(56, 189, 248, 0.08) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+/* Smooth glass effect */
+.glass-panel {
+  background: rgba(13, 16, 23, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+html.light .glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Light mode specific classes for clean contrast */
+html.light .light\:bg-white {
+  background-color: #ffffff !important;
+}
+
+html.light .light\:bg-slate-50 {
+  background-color: #f8fafc !important;
+}
+
+html.light .light\:bg-slate-100 {
+  background-color: #f1f5f9 !important;
+}
+
+html.light .light\:bg-slate-200 {
+  background-color: #e2e8f0 !important;
+}
+
+html.light .light\:text-slate-900 {
+  color: #0f172a !important;
+}
+
+html.light .light\:text-slate-800 {
+  color: #1e293b !important;
+}
+
+html.light .light\:text-slate-700 {
+  color: #334155 !important;
+}
+
+html.light .light\:text-slate-600 {
+  color: #475569 !important;
+}
+
+html.light .light\:text-slate-500 {
+  color: #64748b !important;
+}
+
+html.light .light\:text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+html.light .light\:text-cyan-700 {
+  color: #0e7490 !important;
+}
+
+html.light .light\:text-cyan-600 {
+  color: #0891b2 !important;
+}
+
+html.light .light\:border-slate-200 {
+  border-color: #e2e8f0 !important;
+}
+
+html.light .light\:border-slate-300 {
+  border-color: #cbd5e1 !important;
+}
+
+html.light .light\:hover\:bg-slate-50:hover {
+  background-color: #f8fafc !important;
+}
+
+html.light .light\:hover\:bg-slate-100:hover {
+  background-color: #f1f5f9 !important;
+}
+
+html.light .light\:hover\:bg-slate-200:hover {
+  background-color: #e2e8f0 !important;
+}
+
+html.light .light\:hover\:bg-slate-300:hover {
+  background-color: #cbd5e1 !important;
+}
+
+html.light .light\:hover\:text-slate-900:hover {
+  color: #0f172a !important;
+}
+
+html.light .light\:hover\:border-slate-300:hover {
+  border-color: #cbd5e1 !important;
+}
